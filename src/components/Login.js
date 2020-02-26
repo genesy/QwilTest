@@ -70,6 +70,10 @@ const LoginForm = ({navigation}) => (
               testID="login-btn"
               title="Login"
             />
+            {/* Had to add this because i have no other way to test if button is actually disabled */}
+            {(!values.password || !values.username) && (
+              <View testID="login-btn-isDisabled" />
+            )}
           </View>
         )}
       </Formik>
